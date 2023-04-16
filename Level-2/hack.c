@@ -11,9 +11,10 @@ int main() {
     printf("1. A dummy setting has been set to dummy number '1' \n");
     printf("2. Making sure user '%s' is not an admin by performing a check -> [Result] Admin:%i \n\n", ua->username, ua->isAdmin);
     
-    if (ua->isAdmin == 1)
+    if (ua->isAdmin == 1) {
         printf("<SOS> PRIVILEGE ESCALATION ATTACK DETECTED \n");
-    
+        return 1;
+    }
     if (ua->isAdmin == 0) 
         printf("CONGRATULATIONS LEVEL 2 PASSED!");
 

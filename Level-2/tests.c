@@ -14,8 +14,9 @@ int main() {
     printf("3. Dummy setting '1' has been now set to dummy number '10' for user '%s' \n", ua->username);
     printf("4. Making sure user '%s' is not an admin by performing a check -> [Result] Admin:%i \n\n", ua->username, ua->isAdmin);
 
-    if (ua->isAdmin == 0) 
+    if (ua->isAdmin == 0) {
         printf("User is not an admin so the code works as expected... is it though? \n");
-        
-    return 0;
+        return 0;
+    }
+    return 1;
 }
